@@ -29,22 +29,22 @@ const Navigation = () => {
         <div className={`nav-elements ${showNavigation && 'active'}`}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" ariaLabel="Home">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/reservations">Reservations</NavLink>
+              <NavLink to="/reservations" ariaLabel="Reservations">Reservations</NavLink>
             </li>
             <li>
-              <NavLink to="/index.html">About</NavLink>
+              <NavLink to="/index.html" ariaLabel="About">About</NavLink>
             </li>
             <li>
-              <NavLink to="/index1.html">Menu</NavLink>
+              <NavLink to="/index1.html" ariaLabel="Menu">Menu</NavLink>
             </li>
             <li>
-              <NavLink to="/index3.html">Order Online</NavLink>
+              <NavLink to="/index3.html" ariaLabel="Order Online">Order Online</NavLink>
             </li>
             <li>
-              <NavLink to="/index4.html">Login</NavLink>
+              <NavLink to="/index4.html" ariaLabel="Login">Login</NavLink>
             </li>
           </ul>
         </div>

@@ -7,7 +7,7 @@ const Specials = () => {
        <h1 className="specials-title secondary-black">This weeks specials!</h1>
     </article>
     <article className="vertical-center">
-        <a href="#" className="little-pill-button">Online Menu</a>
+        <a href="/" className="little-pill-button" ariaLabel="Online Menu">Online Menu</a>
     </article>
 </section>
   )
