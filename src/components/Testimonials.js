@@ -18,7 +18,7 @@ const Testimonials = () => {
 
         <section className="testimonials own-green-bg">
         <article>
-                <img src={avatar1} width="75"/>
+                <img src={avatar1} width="75" alt="testimonials"  />
                     <div>
                     <img className="testimonials-star" src={star} alt=""/>
                         <img className="testimonials-star" src={star} alt=""/>
@@ -34,7 +34,7 @@ const Testimonials = () => {
                     </div>
               </article>
               <article>
-                <img src={avatar2}  width="75"/>
+                <img src={avatar2} width="75" alt="testimonials" />
                     <div class="stars">
                         <img className="testimonials-star" src={star} alt=""/>
                         <img className="testimonials-star" src={star} alt=""/>
@@ -50,7 +50,7 @@ const Testimonials = () => {
                     </div>
               </article>
               <article>
-                <img src={avatar3}  width="75"/>
+                <img src={avatar3}  width="75" alt='testimonials'/>
                     <div className="stars">
                     <img className="testimonials-star" src={star} alt=""/>
                         <img className="testimonials-star" src={star} alt=""/>
@@ -66,7 +66,7 @@ const Testimonials = () => {
                     </div>
               </article>
               <article>
-                <img src={avatar4}  width="75"/>
+                <img src={avatar4}  width="75" alt='testimonials'/>
                     <div className="stars">
                     <img className="testimonials-star" src={star} alt=""/>
                         <img className="testimonials-star" src={star} alt=""/>
