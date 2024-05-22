@@ -1,38 +1,538 @@
-.App {
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+    background-color: #EDEFEE;
+    font-family: 'Markazi Text', serif;
+    margin-top: .5rem;
+    margin-bottom: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+nav ul{
+    list-style:none;
+    padding:3rem 2rem;
+}
+nav li{
+    display: inline-block;
+    padding-right:2rem;
+    text-decoration: none;
+}
+a:link { 
+  text-decoration: none; 
+  color:#333;
+  font-weight: 500;
+} 
+a:visited { 
+  text-decoration: none; 
+  color:#333;
+} 
+a:hover { 
+  text-decoration: none; 
+  color:#333;
+} 
+a:active { 
+  text-decoration: none; 
+  color:#333;
+}
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .navbar {
+    position: relative;
+  }
+  .logo {
+  }
+  .menu-icon {
+    display: none;
+  }
+  .nav-elements {
+  } 
+  .nav-elements ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  .nav-elements ul a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2f234f;
+    text-decoration: none;
+  }
+  
+  .nav-elements ul a.active {
+    color: #574c4c;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-elements ul a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #574c4c;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-elements ul li:not(:last-child) {
+      margin-right: 30px;
+    }
+    .container{
+      justify-content: space-between;
+    }
+    .cards .order-delivery {
+      display: block;
+      padding: 45px 10px 25px 10px;
+  }
+  article.card{
+    min-width: 300px;
+  }
+  }
+  
+   
+
+section{
+   display: flex;
+}
+article, footer{
+ flex: 1;
+
+}
+section#testimonials{
+  display:flex;
+  justify-content: center;
+}
+
+article.ratings {
+  width: 300px;
+  height: 100px;
+  margin: 10px;
+  background-color: #3498db;
+  color: #fff;
+  line-height: 100px;
+}
+/*FOOTER SECTION*/
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:200px;
+}
+footer li{
+  padding:5px;
+}
+
+footer div{
+    flex: 1;
+}
+footer img{
+    margin-top:3rem;
+    height: 6rem;
+    width: 4rem;
+}
+
+.testimonials article {
+  max-width: 225px;
+  text-align: center;
+  background: #fff;
+  padding: .25rem 0 1em 0;
+  border-radius: 30px;
+  margin-right:25px;
+  margin-bottom:25px;
+  min-width: 125px;
+ 
+}
+.testimonials h1, .testimonials p{
+    text-align: center;
+    display: block;
+    flex:1;
+}
+.testimonials-star {
+  height: 30px;
+  width: 30px;
+}
+.testimonials .name{
+  padding:5px;
+}
+.testimonials .description{
+  padding:5px;
+}
+
+.navigation{
+  display: flex;
+  flex-direction: row;
+}
+header{
+  flex:1;
+  padding:2rem;
+}
+header img{
+  text-align:right;
+  float:right;
+  height:3rem;
+}
+nav{
+  flex:2;
+  text-align:left;
+}
+.vertical-center {
+display: flex;
+justify-content: right; /* center horizontally */
+align-items: center; /* center vertically */
+padding-right:35px;
+}
+
+.hero, .specials,.cards, footer, .about{
+  padding: 3% 25% 0% 25%;
+}
+.testimonials{
+  padding: 3% 25% 3% 25%;
+}
+/* Hero Section */
+.display-title{
+  font-family: Markazi;
+  font-weight: bold;
+  font-size: 64px;
+}
+.display-subtitle{
+  font-family: Markazi;
+  font-weight: regular;
+  font-size: 48px;
+}
+.display-text{
+  font-size: 24px;
+  font-family: Karla;
+  max-width: 25ch;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  font-weight: medium;
+}
+#hero-img{
+  position: relative;
+}
+.hero img {
+  width:300px;
+  height: 380px;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 15px;
+  left:32%;
+}
+
+/* Specials Section */
+
+.specials-title{
+  font-size:40pt;
+  font-weight:400;
+  margin-bottom:1rem;
+}
+
+/* Cards Section */
+.cards{
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.card-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Karla;
+  padding:10px;
+  display: inline-block;
+}
+
+.card-title-area{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .card-price{
+  font-size:1.3rem;
+  line-height: 1.5;
+  font-family: Karla;
+  display: inline-block;
+  padding:10px;
+}
+.cards .card{
+  margin-top:0;
+}
+.cards .paragraph-text{
+  height:100px;
+}
+
+.cards .order-delivery{
+  display: block;
+  padding:10px 10px 25px 10px;
+}
+
+
+article.card {
+  width: 300px;
+  background-color: #EDEFEE;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top:40px;
+  margin-right:25px;
+  margin-bottom:25px;
+  flex:1;
+  border-radius: .7rem;
+}
+
+article.card img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: .7rem .7rem 0 0;
+}
+
+article .card-content {
+  text-align: left;;
+  padding: 10px;
+}
+
+article .card-content ul, footer ul{
+  list-style: none; 
+}
+
+.paragraph-text{
+  font-size: 1rem;
+  font-family: Karla;
+  max-width: 65ch;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  font-weight: medium;
+  color:#495E57;
+  padding:10px;
+}
+
+/* Testimonials Section */
+.testimonials{
+  display: flex;
+  flex-wrap: wrap;
+}
+h2.testimonials-title{
+  font-family: Karla;
+  font-weight: 500;
+  font-size: 32px;
+  text-align: center;
+  padding:100px;
+}
+.testimonials img{
+  border-radius: 50%;
+
+}
+
+/* About Section */
+h1.about-title{
+  font-size: 64px;
+  color: #495e57;
+  font-weight:500;
+  font-family: Karla;
+}
+h2.about-subtitle{
+  font-size: 48px;
+  font-family: Karla;
+
+}
+p.about-text{
+  color: #333;
+  font-family: Karla,sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding:25px 25px 0 0;
+}
+
+ 
+
+ 
+article.card img {
+  width: 100%;
+  height: auto;
+  height: 250px;
+  object-fit: cover;
+}
+
+.little-pill-button {
+display: inline-block;
+padding: 10px 20px;
+border-radius: 16px; /* Adjust the border-radius for desired roundness */
+background-color: #F4CE14; /* Set the background color */
+color: #495e57;
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.3s ease; /* Add smooth transition on hover */
+cursor: pointer;
+}
+
+/*  Little Lemon Button*/
+.little-pill-button:hover {
+background-color: #F4CE12; /* Change the background color on hover */
+}
+.little-pill-button:active{
+  transform: translateY(3px);
+}
+
+@media (max-width: 600px) {
+
+  .container{
+    justify-content: space-between;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #EDEFEE;;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+  .cards .order-delivery {
+    display: block;
+    padding: 45px 10px 25px 10px;
+}
+
+
+  footer {
+      width:100%;
+      margin-bottom: 20px;
+  }
+  #footer-logo{
+      display: none;
+  }
+  .hero img, #about-images {
+  display: none;
+
+}
+article.card{
+  min-width: 300px;
+}
+
+/*ABOUT SECTION*/
+p.about-text{
+  width:100%;
+}
+
+
+}
+
+
+#about-images{
+  position:relative;
+}
+#about-over-img {
+position: absolute;
+left: 0px;
+top: 100px;
+z-index: -1;
+height: 380px;
+width:300px;
+object-fit: cover;
+}
+
+#about-under-img {
+position: absolute;
+left: 200px;
+top: 10px;
+z-index: -1;
+height: 380px;
+width:300px;
+object-fit: cover;
+}
+
+/* CSS Styles */
+/* reservation */
+.reservation-container {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:500px;
+  padding:100px;
+}
+
+.reservation-content {
+  width: 400px;
+  padding:20px;
+  background-color: #fff;
+  background-color: #EDEFEE;
+}
+.reservation-content h2{
+  padding:15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.full-width {
+  grid-column: span 2;
+}
+.own-green{
+  color:#495E57;
+}
+.own-green-bg{
+  background-color:#495E57;
+}
+.own-yellow{
+  color:#F4CE14;
+}
+.dropdown-color{
+  color:#EDEFEE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.primary-green{
+  color:#495e57;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.primary-yellow{
+  color:#F4CE14;
 }
-
-.App-link {
-  color: #61dafb;
+.secondary-beige{
+  color:#FDABBB;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.secondary-peach{
+  color:#EE9972;
+}
+.secondary-pastel{
+  color:#EDEFEE;
+}
+.secondary-black{
+  color:#333;
+}
+.mt-5{
+  margin-top:3%;
+}
+.mb-5{
+  margin-bottom:5%;
 }
