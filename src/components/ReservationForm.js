@@ -1,4 +1,3 @@
-// src/EventForm.js
 import React, { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -42,18 +41,18 @@ const ReservationForm = ({
 
   const validationSchema = Yup.object({
     date: Yup.date()
-    .transform(function (value, originalValue) {
-      if (this.isType(value)) {
-        return value;
-      }
-      const result = parse(originalValue, "dd.MM.yyyy", new Date());
-      return result;
-    })
-    .required("date is required")
-    .min(
-      new Date().toJSON().slice(0, 10).replace(/-/g, "/"),
-      "Date in the past is not allowed."
-    ),
+      .transform(function (value, originalValue) {
+        if (this.isType(value)) {
+          return value;
+        }
+        const result = parse(originalValue, "dd.MM.yyyy", new Date());
+        return result;
+      })
+      .required("date is required")
+      .min(
+        new Date().toJSON().slice(0, 10).replace(/-/g, "/"),
+        "Date in the past is not allowed."
+      ),
     time: Yup.string().required("Time is required"),
     guests: Yup.number()
       .min(1, "Must be at least 1 guest")
@@ -125,7 +124,11 @@ const ReservationForm = ({
                   />
                 </div>
                 <div className="form-group">
-                  <button ariaLabel="On Click" type="submit" disabled={isSubmitting}>
+                  <button
+                    ariaLabel="On Click"
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
                     submit
                   </button>
                 </div>
